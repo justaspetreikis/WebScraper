@@ -2,21 +2,21 @@
 using WebScraper.Models;
 using WebScraper.Services;
 
-string baseUrl = "http://homeworktask.infare.lt/";
-int maxConnections = 1;
+string baseUrl = ""; //add link here
+int maxConnections = 0;
 
 List<SearchParameters> searchParameters = new List<SearchParameters>
         {
             new SearchParameters { From = "JFK", To = "CPH", Depart = "2023-08-10", Return = "2023-08-16" },
             new SearchParameters { From = "MAD", To = "AUH", Depart = "2023-08-09", Return = "2023-08-16" },
-            new SearchParameters { From = "MAD", To = "FUE", Depart = "2023-08-10", Return = "2023-08-16" },
+            new SearchParameters { From = "MAD", To = "FUE", Depart = "2023-07-24", Return = "2023-07-29" },
             new SearchParameters { From = "JFK", To = "CPH", Depart = "2023-08-10", Return = "2023-08-16" },
             new SearchParameters { From = "MAD", To = "FUE", Depart = "2023-08-09", Return = "2023-08-20" },
             new SearchParameters { From = "MAD", To = "AUH", Depart = "2023-08-09", Return = "2023-08-20" },
             new SearchParameters { From = "CPH", To = "MAD", Depart = "2023-08-09", Return = "2023-08-16" },
             new SearchParameters { From = "MAD", To = "AUH", Depart = "2023-08-09", Return = "2023-08-16" },
             new SearchParameters { From = "JFK", To = "AUH", Depart = "2023-08-09", Return = "2023-08-16" },
-            new SearchParameters { From = "MAD", To = "AUH", Depart = "2023-08-15", Return = "2023-08-16" },
+            new SearchParameters { From = "MAD", To = "AUH", Depart = "2023-05-15", Return = "2023-08-16" },
         };
 
 using (HttpClient client = new HttpClient())
